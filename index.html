@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="shortcut icon" href="img/img1.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styling for the prediction section */
+        .prediction-section {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .prediction-section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .prediction-section label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .prediction-section input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .prediction-section button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .prediction-section button:hover {
+            background-color: #0056b3;
+        }
+
+        .prediction-section p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Weather App Main -->
+    <div class="app-main" id="parent">
+        <!-- Existing Get Weather functionality -->
+        <div class="header">
+            <h4>Get Weather</h4>
+        </div>
+        <div class="searchInputBox">
+            <input type="text" name="" id="input-box" class="input-box" placeholder="enter city name">
+        </div>
+        <div class="weather-body" id="weather-body">
+            <!-- weather-body will be appended through JavaScript -->
+        </div>
+    </div>
+
+    <!-- Weather Prediction Section -->
+    <div class="prediction-section">
+        <h2>Get Weather Prediction</h2>
+        <form id="predictionForm">
+            <label for="historicalData">Enter Historical Data (comma-separated temperatures):</label>
+            <input type="text" id="historicalData" placeholder="e.g., 20, 21, 22, 23" required>
+            <button type="submit">Predict</button>
+        </form>
+        <p id="predictionResult"></p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SweetAlert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
